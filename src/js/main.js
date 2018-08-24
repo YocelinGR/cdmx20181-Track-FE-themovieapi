@@ -47,6 +47,7 @@ const getUserActivity = () => {
 	})
 }
 getUserActivity();
+// jquery modal
 $(document).ready(function(){
 	$('.modal').modal();
 });
