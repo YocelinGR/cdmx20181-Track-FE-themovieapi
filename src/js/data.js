@@ -1,43 +1,43 @@
 window.cinema = {
-  getMoviInfo : (data) => {
+	getMoviInfo : (data) => {
 
-    let movieArray = [];
-    let poster = '';
-    let title = '';
-    let type = '';
-    let year = '';
-    let id = '';
-        let infoMovie = data.Search;
-        for (eachMovie in infoMovie) {
-          let moviesObj = {};
-          if (infoMovie[eachMovie].Poster == "N/A") {
-            poster = 'http://www.animated-gifs.eu/category_nature/space-ufo-abductions/0024.gif';
-          } else {
-            poster = infoMovie[eachMovie].Poster;
-          }
-          title = infoMovie[eachMovie].Title;
-          type = infoMovie[eachMovie].Type;
-          year = infoMovie[eachMovie].Year;
-          id = infoMovie[eachMovie].imdbID;
-          moviesObj.poster = poster;
-          moviesObj.title = title;
-          moviesObj.type = type;
-          moviesObj.year = year;
-          moviesObj.id = id;
-          movieArray.push(moviesObj);
-          poster = '';
-          title = '';
-          type = '';
-          year = '';
-          id = '';
-        }
-        return movieArray;
-  },
-  moviesPrint : (allmovies) => {
-      let movieCard = document.getElementById('movieCard');
-      let cards = '';
-      for (let i = 0; i<allmovies.length; i++) {
-        cards +=
+		let movieArray = [];
+		let poster = "";
+		let title = "";
+		let type = "";
+		let year = "";
+		let id = "";
+		let infoMovie = data.Search;
+		for (eachMovie in infoMovie) {
+			let moviesObj = {};
+			if (infoMovie[eachMovie].Poster == "N/A") {
+				poster = "http://www.animated-gifs.eu/category_nature/space-ufo-abductions/0024.gif";
+			} else {
+				poster = infoMovie[eachMovie].Poster;
+			}
+			title = infoMovie[eachMovie].Title;
+			type = infoMovie[eachMovie].Type;
+			year = infoMovie[eachMovie].Year;
+			id = infoMovie[eachMovie].imdbID;
+			moviesObj.poster = poster;
+			moviesObj.title = title;
+			moviesObj.type = type;
+			moviesObj.year = year;
+			moviesObj.id = id;
+			movieArray.push(moviesObj);
+			poster = "";
+			title = "";
+			type = "";
+			year = "";
+			id = "";
+		}
+		return movieArray;
+	},
+	moviesPrint : (allmovies) => {
+		let movieCard = document.getElementById("movieCard");
+		let cards = "";
+		for (let i = 0; i<allmovies.length; i++) {
+			cards +=
         `<div class ="item>"
         <div class="row">
           <div class="col s12 m12">
@@ -69,21 +69,21 @@ window.cinema = {
               <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
             </div>
           </div>`;
-      }
-      movieCard.innerHTML = cards;
-      $(document).ready(function(){
-        $('.modal').modal();
-      });
-  },
-  getMovies : (apikey, movie) => {
-	let movieLink = "https://www.omdbapi.com/?apikey="+apikey+"&s="+movie+"&plot=full&type=series";
-	fetch(movieLink)
-		.then(data => data.json())
-		.then(data => {
-			cinema.moviesPrint(cinema.getMoviInfo(data));
-		})
-		.catch(error => {
-			console.log("Error", error);
+		}
+		movieCard.innerHTML = cards;
+		$(document).ready(function(){
+			$(".modal").modal();
 		});
-  }
-}
+	},
+	getMovies : (apikey, movie) => {
+		let movieLink = "https://www.omdbapi.com/?apikey="+apikey+"&s="+movie+"&plot=full&type=series";
+		fetch(movieLink)
+			.then(data => data.json())
+			.then(data => {
+				cinema.moviesPrint(cinema.getMoviInfo(data));
+			})
+			.catch(error => {
+				console.log("Error", error);
+			});
+	}
+};
