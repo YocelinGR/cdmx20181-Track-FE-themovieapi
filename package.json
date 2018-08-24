@@ -1,0 +1,25 @@
+{
+  "name": "cdmx20181-Track-FE-themovieapi",
+  "version": "1.0.0",
+  "description": "Use of aomdb api",
+  "main": "index.js",
+  "repository": "https://github.com/YocelinGR/cdmx20181-Track-FE-themovieapi.git",
+  "author": "YocelinGRomero <garcia_romero.y@hotmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^5.4.0",
+    "htmllint": "^0.7.2",
+    "jest": "^23.5.0",
+    "webpack": "^4.17.0",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.5",
+    "scripts": {
+        "pretest": "eslint src test",
+        "test": "jest --coverage",
+        "build": "webpack --mode=production",
+        "start": "webpack-dev-server --content-base dist/ --mode=development"
+      }
+  }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Movies app</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body>
+      <nav>
+        <div class="nav-wrapper indigo lighten-1">
+          <a href="#" class="brand-logo center indigo lighten-1">Cinema Studio</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a id = "user">Usuario</a></li>
+            <li><a id = "btn-logOut" href="../index.html">Salir</a></li>
+          </ul>
+        </div>
+    </nav>
+    <div class="row">
+        <div class="input-field col s12 m12 l12">
+          <a id = "btn-disney" class="waves-effect waves-light btn btn-large indigo lighten-4"><i class="fa fa-grav" style="font-size:36px;color:white"></i>   Disney</a>
+          <a id = "btn-pirates" class="waves-effect waves-light btn btn-large indigo lighten-4"><i class="fa fa-anchor" style="font-size:36px;color:white"></i>   Piratas</a>
+          <a id = "btn-sherlock" class="waves-effect waves-light btn btn-large indigo lighten-4"><i class="fa fa-map-pin" style="font-size:36px;color:white"></i>   Sherlock</a>
+        </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12 m12 l12">
+      <div id="movieCard" class="container">
+      </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+    <script src="../js/authentications.js"></script>
+    <script src="../js/data.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

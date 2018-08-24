@@ -1,0 +1,32 @@
+* {
+  background-color: rgb(178, 223, 219);
+}
+.btn-large {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,80px);
+  grid-gap: 5px;
+  justify-content: center;
+}
+.fa {
+  background-color: rgb(197, 202, 233);
+}
+.card-content, .card-title, p {
+  text-align: center;
+  background-color: rgb(53, 176, 132);
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,300px);
+  grid-gap: 5px;
+  justify-content: center;
+}
+.card-image {
+  text-align: center;
+}
+.item {
+  border-radius: 5px;
+  padding: 10px;
+}
+.item img {
+  max-width: 100%;
+}
