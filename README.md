@@ -30,7 +30,8 @@ Documentación:
 -	Materialize V1.0.0-rc.2: Uso para estructura en HTML y estilos para vista de autentificación, botones, para generar el Templete String de los cards y sus estilos, para el HTML de la lista de alumnas y su estilo, además para generar los modales y su estilo.
 -	Fetch: Es un objeto de JavaScript que proporciona un método para obtener la información de una URL, en el caso expuesto se usa para tener acceso a un objeto dentro de un archivo JSON que ha sido montado en un servidor web como API.
 -	API: Application Programming Interface, es un conjunto de reglas –código- y especificaciones que las aplicaciones pueden seguir para comunicarse entre ellas, en este caso, se usa para enlazar la llamada de Fetch con el objeto JSON.
-6.2.	Organización: Boilerplate. Estructura de los ficheros.
+6.2.	Organización: Boilerplate.
+Estructura de los ficheros.
 1.	./
 2.	├── .git
 3.	├── docs
