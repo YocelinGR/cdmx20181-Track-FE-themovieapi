@@ -10,5 +10,10 @@ const initializing = () => {
 	};
 	firebase.initializeApp(config);
 	const db = firebase.firestore();
+	console.log('db es: '+ db);
 	return (db);
 };
+
+module.exports = {
+	initializing
+}
